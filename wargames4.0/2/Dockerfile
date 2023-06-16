@@ -52,7 +52,7 @@ RUN echo "maybeyoucantrysomeotherfile iamsomejewerisfilewithsomejewerisdata orma
 
 RUN echo "iamsomejewerisfilewithsomejewerisdata maybeyoucantrysomeotherfile ormaybeicouldbetheanswerinsomeothercontainer">answer03
 
-RUN echo "againajewerisfile areyoueventrying makesuretocheckeverypossiblefile">.answer04
+RUN echo "areyoueventrying makesuretocheckeverypossiblefile">.answer04
 
 RUN chmod 444 answer00
 
