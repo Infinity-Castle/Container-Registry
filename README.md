@@ -1,2 +1,2 @@
 # Container-Registry
-to store all the containers images just
+to store all the containers images
