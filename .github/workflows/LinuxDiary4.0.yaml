@@ -15,7 +15,7 @@ jobs:
 
       - name: Check for Dockerfiles
         run: |
-          changed_files=$(git diff --name-only HEAD HEAD^)
+          changed_files=$(git diff --name-only HEAD -- HEAD^)
           dockerfiles=$(echo "$changed_files" | grep -E 'Dockerfile|dockerfile' || true)
           if [ -n "$dockerfiles" ]; then
             echo "Dockerfiles changed: $dockerfiles"
