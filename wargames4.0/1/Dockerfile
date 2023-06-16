@@ -32,7 +32,7 @@ RUN chmod 444 answer04
 
 WORKDIR /home/wlug
 
-RUN echo "\n\n\n1) You will start within the /home/wlug directory. \n2) Your Flag will be inside current directory only. \n3) Try To Look For a file with the Flag. \n4) Use the value of Flag to Unlock Next Level. \n\n\nPossible Commands for the task -> ls, cd, cat \n\n\nAll The Best !!!">README
+RUN echo "\n\n\n1) You will start within the /home/wlug directory. \n2) Your Flag will be inside current directory only. \n3) Try To Look For a file with the Flag. \n4) Use the value of Flag to Unlock Next Level. \n\n\nPossible Commands for the task -> ls, cd, cat \n\n\nAll The Best !!! and lets start the game">README
 
 RUN chmod 444 README
 
