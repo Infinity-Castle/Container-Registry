@@ -9,31 +9,29 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Displying all the info
-        run: echo "${{secrets.PAT}}" "${{GITHUB_WORKSPACE}}"
-      # - name: Login to GitHub Container Registry
-      #   uses: docker/login-action@v1
-      #   with:
-      #     registry: ghcr.io
-      #     username: wcewlug
-      #     password: ${{ secrets.PAT }}
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: Infinity-Castle
+          password: ${{ secrets.PAT }}
 
-      # - name: Build updated dockerfiles
-      #   run: |
-      #     python ${GITHUB_WORKSPACE}/.github/scripts/linuxdiary-3.0/linuxdiary-3.0.py && ${GITHUB_WORKSPACE}/.github/scripts/linuxdiary-3.0/buildAndUpdate.sh
+      - name: Build updated dockerfiles
+        run: |
+          python ${GITHUB_WORKSPACE}/.github/scripts/linuxdiary-4.0/linuxdiary-4.0.py && ${GITHUB_WORKSPACE}/.github/scripts/linuxdiary-4.0/buildAndUpdate.sh
 
-      # - name: Push hash changes
-      #   run: |
-      #     git config --global user.name 'Walchand Linux Users Group'
-      #     git config --global user.email 'wce.wlugclub@gmail.com'
-      #     git add .
-      #     set +e
-      #     git status | grep modified
-      #     if [ $? -eq 0 ]
-      #     then
-      #         set -e
-      #         git commit -am "Hash Updated - Linux Diary 3.0"
-      #         git push origin
-      #     else
-      #         set -e
-      #     fi
+      - name: Push hash changes
+        run: |
+          git config --global user.name 'Infinity Castle'
+          git config --global user.email 'utmandape4@gmail.com'
+          git add .
+          set +e
+          git status | grep modified
+          if [ $? -eq 0 ]
+          then
+              set -e
+              git commit -am "Hash Updated - Linux Diary 4.0"
+              git push origin
+          else
+              set -e
+          fi
