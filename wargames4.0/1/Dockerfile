@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-LABEL org.opencontainers.image.source=https://github.com/Walchand-Linux-Users-Group/linux-diary
+LABEL org.opencontainers.image.source=https://github.com/Infinity-Castle/Wargames
 
 RUN apt-get update
 
