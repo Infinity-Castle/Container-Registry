@@ -37,7 +37,7 @@ def process(parent_dir, file):
 
 def main():
     global updateFile
-    updateFile = open(os.environ['GITHUB_WORKSPACE'] + "/.github/updates/linuxdiary-4.0", "w+")
+    updateFile = open(os.environ['GITHUB_WORKSPACE'] + "/wargames4.0", "w+")
     process(directory, directory)
     updateFile.close()
 
