@@ -16,7 +16,7 @@ while read p; do
 
     DIRECTORY=$(IFS=/ ; echo "${DIRECTORY_ARR[*]}")
 
-    eval "cd ${DIRECTORY} && docker build -t ghcr.io/Infinity-Castle/${NAME}:latest ."
+    eval "cd ${DIRECTORY} && docker build . -t ghcr.io/Infinity-Castle/${NAME}:latest"
     eval "docker push ghcr.io/Infinity-Castle/${NAME}:latest"
 done < /home/runner/work/Container-Registry/Container-Registry/.github/updates/linuxdiary-4.0
 
