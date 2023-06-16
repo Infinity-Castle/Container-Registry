@@ -18,6 +18,6 @@ while read p; do
 
     eval "cd ${DIRECTORY} && docker build . -t ghcr.io/Infinity-Castle/${NAME}:latest"
     eval "docker push ghcr.io/Infinity-Castle/${NAME}:latest"
-done < /home/runner/work/Container-Registry/Container-Registry/.github/updates/linuxdiary-4.0
+done < /home/runner/work/Container-Registry/Container-Registry/.github/updates/linuxdiary-4.0.txt
 
-rm -f /home/runner/work/Container-Registry/Container-Registry/.github/updates/linuxdiary-4.0
+rm -f /home/runner/work/Container-Registry/Container-Registry/.github/updates/linuxdiary-4.0.txt
