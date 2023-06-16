@@ -35,8 +35,8 @@ jobs:
         run: |
           for file in $dockerfiles; do
             image_name=$(dirname $file)
-            docker build -t ghcr.io/${{ github.repository }}/$image_name:$GITHUB_SHA $image_name
-            docker push ghcr.io/${{ github.repository }}/$image_name:$GITHUB_SHA
+            docker build -t ghcr.io/Infinity-Castle/1:latest .
+            docker push ghcr.io/Infinity-Castle/1:latest
           done
 
 # name: linuxdiary-4.0
