@@ -37,7 +37,7 @@ def process(parent_dir, file):
 
 def main():
     global updateFile
-    updateFile = open(os.environ['GITHUB_WORKSPACE'] + "/wargames4.0", "w+")
+    updateFile = open(os.environ['GITHUB_WORKSPACE'] + "/wargames4.0/Dockerfile", "w+")
     process(directory, directory)
     updateFile.close()
 
