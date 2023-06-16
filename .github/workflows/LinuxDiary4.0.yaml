@@ -20,7 +20,7 @@ jobs:
           if [ -n "$dockerfiles" ]; then
             echo "Dockerfiles changed: $dockerfiles"
           else
-            echo "No Dockerfiles changed. Skipping build and deploy."
+            echo "No Dockerfiles changed. $changed_files, $dockerfiles"
             exit 0
           fi
 
