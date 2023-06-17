@@ -44,7 +44,7 @@ jobs:
             image_name=$(dirname $file)
             echo "image $image_name"
             echo "env $GITHUB_WORKSPACE"
-            docker build --file ${GITHUB_WORKSPACE}+/+$file -t ghcr.io/infinity-castle/$image_name:latest
+            docker build -t ghcr.io/infinity-castle/$image_name:latest ${GITHUB_WORKSPACE}+/+$file
             docker push ghcr.io/infinity-castle/$image_name:latest
           done
           
