@@ -38,7 +38,7 @@ jobs:
 
       - name: Build and Push Docker Images
         run: |
-          echo "${dockerfiles}"
+          echo "doc ${dockerfiles}"
           for file in "${dockerfiles[@]}"; do
             echo "file $file"
             image_name=$(dirname $file)
