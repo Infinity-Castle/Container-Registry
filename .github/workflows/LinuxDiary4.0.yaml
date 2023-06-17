@@ -16,11 +16,10 @@ jobs:
         uses: ahmadnassri/action-changed-files@v1
       - run: |
           for file in ${{ steps.changed-files.outputs.files }}; do
-            if [ contains(steps.changed-files.outputs.files, 'Dockerfile') ]; then
-              echo "$file has changed"
-            fi
-            
+            echo "$file has changed"
           done
+#            if [ contains(steps.changed-files.outputs.files, 'Dockerfile') ]; then            
+          
           
 #       - name: Login to GitHub Container Registry
 #         uses: docker/login-action@v1
