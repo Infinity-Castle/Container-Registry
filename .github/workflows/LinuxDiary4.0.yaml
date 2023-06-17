@@ -19,6 +19,7 @@ jobs:
             if contains(steps.changed-files.outputs.files, 'Dockerfile'); then
               echo "$file has changed"
             fi
+            
           done
           
 #       - name: Login to GitHub Container Registry
