@@ -26,6 +26,7 @@ jobs:
             else
               echo "no file has changed"
             fi
+          "{dockerfiles}={$dockerfiles}" >> "$GITHUB_ENV"
           done 
 
       - name: Login to GitHub Container Registry
@@ -37,7 +38,7 @@ jobs:
 
       - name: Build and Push Docker Images
         run: |
-          for file in "${dockerfiles[@]}"; do
+          for file in "${{github.dockerfiles[@]}}"; do
             echo "$file"
             image_name=$(dirname $file)
             docker build . -t ghcr.io/Infinity-Castle/$image_name:latest
