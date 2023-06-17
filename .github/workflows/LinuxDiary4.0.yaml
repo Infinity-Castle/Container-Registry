@@ -40,7 +40,9 @@ jobs:
         shell: bash
         run: |
           echo "doc ${dockerfiles}"
-          for file in "${dockerfiles[@]}"; do
+          arr=($dockerfiles)
+          echo "doc2 ${arr[@]}"
+          for file in "${arr[@]}"; do
             echo "file $file"
             image_name=$(dirname $file)
             echo "image ghcr.io/infinity-castle/${image_name}:latest"
