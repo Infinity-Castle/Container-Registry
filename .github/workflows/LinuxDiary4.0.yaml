@@ -38,7 +38,7 @@ jobs:
 
       - name: Build and Push Docker Images
         run: |
-          for file in "${{github.dockerfiles}}[@]"; do
+          for file in "${{env.dockerfiles}}[@]"; do
             echo "$file"
             image_name=$(dirname $file)
             docker build . -t ghcr.io/Infinity-Castle/$image_name:latest
