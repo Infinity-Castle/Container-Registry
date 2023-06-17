@@ -14,6 +14,7 @@ jobs:
 
       - id: changed-files
         uses: ahmadnassri/action-changed-files@v1
+
       - run: |
           for file in ${{ steps.changed-files.outputs.files }}; do
             echo "$file has changed"
