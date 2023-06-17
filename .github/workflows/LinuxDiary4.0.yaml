@@ -38,7 +38,7 @@ jobs:
 
       - name: Build and Push Docker Images
         run: |
-          echo "$dockerfiles"
+          echo "${dockerfiles}"
 #         run: |
 #           for file in "${{env.dockerfiles}}[@]"; do
 #             echo "$file"
