@@ -18,30 +18,30 @@ jobs:
         uses: ahmadnassri/action-changed-files@v1
 
       - run: |
+          dockerfiles=()
           for file in ${{ steps.changed-files.outputs.files }}; do
             if [[ $file == *"Dockerfile" ]]; then
+              dockerfiles+=($file)
               echo "$file has changed"
             else
               echo "no file has changed"
             fi
-          done
-#            if [ contains(steps.changed-files.outputs.files, 'Dockerfile') ]; then            
-          
-          
-#       - name: Login to GitHub Container Registry
-#         uses: docker/login-action@v1
-#         with:
-#           registry: ghcr.io
-#           username: UtkarshM-hub
-#           password: ${{ secrets.PAT }}
+          done 
 
-#       - name: Build and Push Docker Images
-#         run: |
-#           for file in $dockerfiles; do
-#             image_name=$(dirname $file)
-#             docker build -t ghcr.io/Infinity-Castle/1:latest .
-#             docker push ghcr.io/Infinity-Castle/1:latest
-#           done
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: UtkarshM-hub
+          password: ${{ secrets.PAT }}
+
+      - name: Build and Push Docker Images
+        run: |
+          for file in "${dockerfiles[@]}"; do
+            image_name=$(dirname $file)
+            docker build -t ghcr.io/Infinity-Castle/$image_name:latest .
+            docker push ghcr.io/Infinity-Castle/$image_name:latest
+          done
 
 
 
