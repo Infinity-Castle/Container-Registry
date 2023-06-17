@@ -42,11 +42,12 @@ jobs:
           for file in "${dockerfiles}[@]"; do
             echo "file $file"
             image_name=$(dirname $file)
-            echo "image $image_name"
-            echo "env $GITHUB_WORKSPACE"
-            docker build --tag "ghcr.io/infinity-castle/$image_name:latest" "$GITHUB_WORKSPACE+/+$file"
-            docker push "ghcr.io/infinity-castle/$image_name:latest"
+            echo "image ghcr.io/infinity-castle/$image_name:latest"
+            echo "env "$GITHUB_WORKSPACE+/+$file"
           done
+#            docker build --tag "ghcr.io/infinity-castle/$image_name:latest" "$GITHUB_WORKSPACE+/+$file"
+#            docker push "ghcr.io/infinity-castle/$image_name:latest"
+          
           
 
 
