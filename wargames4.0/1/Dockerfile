@@ -16,7 +16,7 @@ RUN echo "maybeyoucantrysomeotherfile ormaybeicouldbetheanswerinsomeothercontain
 
 RUN echo "maybeyoucantrysomeotherfile iamsomejewerisfilewithsomejewerisdata ormaybeicouldbetheanswerinsomeothercontainer">answer02
 
-RUN echo "asdfasdfasdfYou Found Me !!! Flag : WLUG{4434455381}">answer03
+RUN echo "You Found Me !!! Flag : WLUG{4434455381}">answer03
 
 RUN echo "againajewerisfile areyoueventrying makesuretocheckeverypossiblefile">answer04
 
