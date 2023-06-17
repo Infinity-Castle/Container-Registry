@@ -118,7 +118,7 @@ RUN echo "Congratulations, You are a Mech Student. Your Flag = WLUG{7218395435}"
 
 RUN echo "maybeyoucantrysomeotherfile iamsomejewerisfilewithsomejewerisdata ormaybeicouldbetheanswerinsomeothercontainer">answer03
 
-RUN echo "adfadfadfadsfadfadfadf againajewerisfile areyoueventrying makesuretocheckeverypossiblefile">.answer00
+RUN echo "againajewerisfile areyoueventrying makesuretocheckeverypossiblefile">.answer00
 
 RUN chmod 444 .answer00
 
