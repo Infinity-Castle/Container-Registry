@@ -26,7 +26,7 @@ jobs:
             else
               echo "no file has changed"
             fi
-          echo "dockerfiles=${dockerfiles}" >> $GITHUB_ENV
+          echo "dockerfiles=${dockerfiles[@]}" >> $GITHUB_ENV
           done 
 
       - name: Login to GitHub Container Registry
