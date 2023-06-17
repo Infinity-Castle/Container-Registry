@@ -37,6 +37,7 @@ jobs:
           password: ${{ secrets.PAT }}
 
       - name: Build and Push Docker Images
+        shell: bash
         run: |
           echo "doc ${dockerfiles}"
           for file in "${dockerfiles[@]}"; do
