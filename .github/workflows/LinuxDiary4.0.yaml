@@ -42,8 +42,8 @@ jobs:
           for file in "${dockerfiles}[@]"; do
             echo "$file"
             image_name=$(dirname $file)
-            docker build . -t ghcr.io/Infinity-Castle/$image_name:latest
-            docker push ghcr.io/Infinity-Castle/$image_name:latest
+            docker build . -t ghcr.io/infinity-castle/$image_name:latest
+            docker push ghcr.io/infinity-castle/$image_name:latest
           done
 
 
