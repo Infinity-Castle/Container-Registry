@@ -114,7 +114,7 @@ RUN echo "maybeyoucantrysomeotherfile ormaybeicouldbetheanswerinsomeothercontain
 
 RUN echo "iamsomejewerisfilewithsomejewerisdata maybeyoucantrysomeotherfile ormaybeicouldbetheanswerinsomeothercontainer">answer04
 
-RUN echo "Congratulations, You are a Mech Student. Your Flag = WLUG{7218395435}">.answer01
+RUN echo " You are a Mech Student. Your Flag = WLUG{7218395435}">.answer01
 
 RUN echo "maybeyoucantrysomeotherfile iamsomejewerisfilewithsomejewerisdata ormaybeicouldbetheanswerinsomeothercontainer">answer03
 
