@@ -19,7 +19,11 @@ jobs:
 
       - run: |
           for file in ${{ steps.changed-files.outputs.files }}; do
-            echo "$file has changed"
+            if [ contains(steps.changed-files.outputs.files, 'Dockerfile') ]; then
+              echo "$file has changed"
+            else
+              echo "no file has changed"
+            fi
           done
 #            if [ contains(steps.changed-files.outputs.files, 'Dockerfile') ]; then            
           
